@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculadora {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 24px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+#pantalla {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 36px;
+    text-align: right;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: transparent;
+    color: #222222;
+    outline: none;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.botones button {
+    aspect-ratio: 1;
+    font-size: 22px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f1f1f4;
+    color: #222222;
+    cursor: pointer;
+}
+
+.botones button:hover {
+    background-color: #e2e2e8;
+}
+
+.botones button[onclick^="operacion"] {
+    background-color: #ffe8e0;
+    color: #ff6b3d;
+}
+
+.botones button[onclick="limpiar()"] {
+    color: #ff6b3d;
+}
+
+.botones button[onclick="calcular()"] {
+    background-color: #ff6b3d;
+    color: #ffffff;
+}
